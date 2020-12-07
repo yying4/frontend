@@ -121,3 +121,7 @@ dmypy.json
 
 # MacOS
 .DS_Store
+
+#nonono
+node_modules/
+package-lock.json
