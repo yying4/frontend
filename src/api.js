@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 
 const service = axios.create({
-//   headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+  //headers: {'Content-Type': 'application/x-www-form-urlencoded'},
   headers: {'Content-Type': 'application/json'},
   timeout: 1000,
   xsrfCookieName: 'access-token',
@@ -38,7 +38,7 @@ export async function addWebsite(website) {
   let res;
   try {
       //res = await service.post(endpoint)
-      res = await service.post(endpoint,{"s":"d"})
+      res = await service.post(endpoint,{body:{website:website}})
   } catch(e) {
       console.log(e);
       return {error: e};
